@@ -1,9 +1,16 @@
 package main
 
 import (
-	"github.com/bootcamp-go/desafio-go-bases/internal/tickets"
+	"fmt"
+
+	"github.com/ehvalencia/EjemplosGo/internal/tickets"
 )
 
 func main() {
-	total, err := tickets.GetTotalTickets("Brazil")
+	totalTickets, err := tickets.GetTotalTickets("Indonesia")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("El total de boletos vendidos para China es: %d\n", totalTickets)
+
 }
